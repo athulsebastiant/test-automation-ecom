@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EcomTestSuite" verbose="1">
+	<listeners>
+        <listener class-name="org.ats.ecom_testing.utils.AllureListener"/>
+    </listeners>
+	 <parameter name="browser" value="chrome"/>
+	 <test name="AccountTests">
+		<groups>
+			<run>
+				<include name="account" />
+			</run>
+		</groups>
+		<classes>
+			<class name="org.ats.ecom_testing.tests.LoginWithCorrectCreds"></class>
+			<class name="org.ats.ecom_testing.tests.LoginWithIncorrectCreds"></class>
+			<class name="org.ats.ecom_testing.tests.LogoutSuccessTest"></class>
+			<class name="org.ats.ecom_testing.tests.RegisterUserTest"></class>
+			<class
+				name="org.ats.ecom_testing.tests.RegisterUserWithExistingEmail"></class>
+		</classes>
+</test>
+	</suite>

@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EcomTestSuite" verbose="1" thread-count="5" parallel="methods">
+	<listeners>
+        <listener class-name="org.ats.ecom_testing.utils.AllureListener"/>
+    </listeners>
+	 <parameter name="browser" value="chrome"/>
+	 <test name="productTests">
+		<groups>
+			<run>
+				<include name="product"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="org.ats.ecom_testing.tests.ProductBrandTest"></class>
+			<class name="org.ats.ecom_testing.tests.VerifyProductCategoriesTest"></class>
+			<class name="org.ats.ecom_testing.tests.SearchProductsTest"></class>
+			<class name="org.ats.ecom_testing.tests.AllProductsTest"></class>
+			<class name="org.ats.ecom_testing.tests.AddReviewTest"></class>
+			
+		</classes>
+	</test>
+	</suite>

@@ -1,0 +1,66 @@
+package org.ats.ecom_testing.tests;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.ats.ecom_testing.pages.AllProductsPage;
+import org.ats.ecom_testing.pages.CartPage;
+import org.ats.ecom_testing.pages.HomePage;
+import org.ats.ecom_testing.pages.SignupLoginPage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
+
+
+public class VerifyCartAfterLoginTest extends org.ats.ecom_testing.base.BaseTest{
+	
+	final String keyword = "Cotton";
+	Set<String> productsAdded = new HashSet<String>();
+	Set<String> cartProducts;
+	int i;
+	@Test (groups = {"cart"})
+	@Description("Test to check if the cart products are still present correctly after the user adds them to the cart, then returns to the cart after login.")
+	@Severity(SeverityLevel.NORMAL)
+	public void verifyCartAfterLogin() {
+		HomePage home = new HomePage();
+		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		home.clickProductsBtn();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
+		AllProductsPage allProducts = new AllProductsPage();
+		allProducts.search(keyword);
+		Assert.assertTrue(allProducts.isSearchedProductsHeadervisible(),"Searched products header is not visible");
+		Assert.assertTrue(allProducts.areAllSearchedProductsRelevant(keyword));
+		int noOfProdsDisplayed = allProducts.getNumberOfDisplayedProducts();
+		
+		for (i=1;i<noOfProdsDisplayed;i++) {
+			productsAdded.add(allProducts.clickAddToCart(i));
+			allProducts.clickContinueShopping();
+		}
+		productsAdded.add(allProducts.clickAddToCart(i));
+		allProducts.clickViewCart();
+		CartPage cartPage = new CartPage();
+		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
+		cartProducts= cartPage.getAllProductsinCart();
+		for (String expected : productsAdded) {
+		    Assert.assertTrue(cartProducts.contains(expected),
+		        "Cart does not contain expected product: " + expected);
+		}
+		cartPage.clickSignupLogin();
+		SignupLoginPage signupPage = new SignupLoginPage();
+		Assert.assertTrue(signupPage.isLoginHeaderVisible(), "Login header isn't visible");
+		signupPage.enterLoginEmail("asas1@mail.com");
+		signupPage.enterLoginPassword("1234567");
+		signupPage.clickLoginBtn();
+		Assert.assertTrue(home.isLoggedInUserNameVisible(), "Logged in Username not visible");
+		home.clickCartBtn();
+		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
+		for (String expected : productsAdded) {
+		    Assert.assertTrue(cartProducts.contains(expected),
+		        "Cart does not contain expected product: " + expected);
+		}
+	}
+}

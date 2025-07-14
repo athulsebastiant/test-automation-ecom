@@ -1,0 +1,36 @@
+# IDE-specific files
+.project
+.classpath
+.settings/
+.idea/
+*.iml
+.metadata/
+*.launch
+
+# Maven build artifacts
+/target/
+.mvn/
+
+# Log files
+*.log
+logs/ # If you have a dedicated logs directory
+
+*.tmp
+*.bak
+*.old
+
+# Allure Report specific
+allure-results/
+allure-report/
+
+# Configuration/Sensitive files (example - adjust based on your actual filenames)
+config.properties
+secrets.properties
+credentials.json
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [EcomTestSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="checkout(failed)">
+    <groups>
+      <run>
+        <include name="checkout"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.ats.ecom_testing.tests.PlaceOrderAndRegisterTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="placeOrderAndRegisterTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.ats.ecom_testing.tests.PlaceOrderAndRegisterTest -->
+    </classes>
+  </test> <!-- checkout(failed) -->
+</suite> <!-- Failed suite [EcomTestSuite] -->

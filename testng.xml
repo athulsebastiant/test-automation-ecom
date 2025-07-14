@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EcomTestSuite" verbose="1">
+	<listeners>
+        <listener class-name="org.ats.ecom_testing.utils.AllureListener"/>
+    </listeners>
+	 <parameter name="browser" value="chrome"/>
+	<test name="checkout">
+		<groups>
+			<run>
+				<exclude name="checkout"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="org.ats.ecom_testing.tests.LoginAndCheckout"></class>
+			<class name="org.ats.ecom_testing.tests.PlaceOrderAndRegisterTest"></class>
+			<class name="org.ats.ecom_testing.tests.RegisterAndCheckoutTest"></class>
+		</classes>
+	</test>
+	
+	
+	 
+
+
+</suite>
