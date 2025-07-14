@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="EcomTestSuite" verbose="1">
+<suite name="EcomTestSuite" verbose="1" thread-count="6" parallel="methods">
 	<listeners>
         <listener class-name="org.ats.ecom_testing.utils.AllureListener"/>
     </listeners>

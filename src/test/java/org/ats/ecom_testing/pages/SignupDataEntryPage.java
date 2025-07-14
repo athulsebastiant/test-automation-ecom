@@ -2,16 +2,22 @@ package org.ats.ecom_testing.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import static org.ats.ecom_testing.utils.WaitUtils.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.ats.ecom_testing.utils.DriverFactory;
 public class SignupDataEntryPage {
 	WebDriver driver;
 	Actions actions;
 	JavascriptExecutor js;
+	private static final Logger log = LogManager.getLogger(SignupDataEntryPage.class);
+
 	By enterAccountInfoHeader = By.xpath("//h2/b[contains(text(),'Enter Account Information')]");
 	By selectTitleMr = By.id("id_gender1"); 
 	By selectTitleMrs = By.id("id_gender2");
@@ -48,16 +54,36 @@ public class SignupDataEntryPage {
 	}
 	
 	public boolean isEnterAccountInfoVisible() {
-		waitForVisibility(driver, enterAccountInfoHeader, 10);
-		return driver.findElement(enterAccountInfoHeader).isDisplayed();
+		log.info("Checking visibility of 'Enter Account Information' header.");
+		try {
+			waitForVisibility(driver, enterAccountInfoHeader, 10);
+			return driver.findElement(enterAccountInfoHeader).isDisplayed();
+		} catch (TimeoutException e) {
+			log.error("Timeout waiting for header.", e);
+		} catch (NoSuchElementException e) {
+			log.error("Header not found.", e);
+		} catch (Exception e) {
+			log.error("Error verifying header visibility.", e);
+		}
+		return false;
 	}
 	
 	public void selectTitleMr() {
-		driver.findElement(selectTitleMr).click();
+		log.info("Selecting 'Mr' as title.");
+		try {
+			driver.findElement(selectTitleMr).click();
+		} catch (Exception e) {
+			log.error("Failed to select 'Mr'.", e);
+		}
 	}
 	
 	public void selectTitleMrs() {
-		driver.findElement(selectTitleMrs).click();
+		log.info("Selecting 'Mrs' as title.");
+		try {
+			driver.findElement(selectTitleMrs).click();
+		} catch (Exception e) {
+			log.error("Failed to select 'Mrs'.", e);
+		}
 	}
 	
 //	public void typeName(String name) {
@@ -65,81 +91,161 @@ public class SignupDataEntryPage {
 //	}
 	
 	public void typePswd(String pswd) {
-		driver.findElement(enterPasswd).sendKeys(pswd);
+		log.info("Entering password.");
+		try {
+			driver.findElement(enterPasswd).sendKeys(pswd);
+		} catch (Exception e) {
+			log.error("Failed to enter password.", e);
+		}
 	}
 	
 	public void chooseDay(String day) {
-		Select select = new Select(driver.findElement(selectDay));
-		select.selectByVisibleText(day);
+		log.info("Selecting day: " + day);
+		try {
+			new Select(driver.findElement(selectDay)).selectByVisibleText(day);
+		} catch (Exception e) {
+			log.error("Failed to select day.", e);
+		}
 	}
 	
 	public void chooseMonth(String month) {
-		Select select = new Select(driver.findElement(selectMonth));
-		select.selectByVisibleText(month);
+		log.info("Selecting month: " + month);
+		try {
+			new Select(driver.findElement(selectMonth)).selectByVisibleText(month);
+		} catch (Exception e) {
+			log.error("Failed to select month.", e);
+		}
 	}
 	
 	public void chooseYear(String year) {
-		Select select = new Select(driver.findElement(selectYear));
-		select.selectByVisibleText(year);
+		log.info("Selecting year: " + year);
+		try {
+			new Select(driver.findElement(selectYear)).selectByVisibleText(year);
+		} catch (Exception e) {
+			log.error("Failed to select year.", e);
+		}
 	}
 	
 	public void optNewsLetter(boolean choice) {
-		
-		if(choice) {
-			js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(checkNewsletter));
-			driver.findElement(checkNewsletter).click();
+		log.info("Newsletter opt-in: " + choice);
+		try {
+			if (choice) {
+				js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(checkNewsletter));
+				driver.findElement(checkNewsletter).click();
+			}
+		} catch (Exception e) {
+			log.error("Failed to select newsletter option.", e);
 		}
 	}
 	
 	public void optSpOffer(boolean choice) {
-		if(choice) {
-			js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(checkSpOffer));
-			driver.findElement(checkSpOffer).click();
+		log.info("Special offer opt-in: " + choice);
+		try {
+			if (choice) {
+				js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(checkSpOffer));
+				driver.findElement(checkSpOffer).click();
+			}
+		} catch (Exception e) {
+			log.error("Failed to select special offer option.", e);
 		}
 	}
 	
 	public void typeFirstname(String fn) {
-		driver.findElement(enterFirstName).sendKeys(fn);
+		log.info("Entering first name.");
+		try {
+			driver.findElement(enterFirstName).sendKeys(fn);
+		} catch (Exception e) {
+			log.error("Failed to enter first name.", e);
+		}
 	}
 	
 	public void typeLastname(String ln) {
-		driver.findElement(enterLastName).sendKeys(ln);
+		log.info("Entering last name.");
+		try {
+			driver.findElement(enterLastName).sendKeys(ln);
+		} catch (Exception e) {
+			log.error("Failed to enter last name.", e);
+		}
 	}
 	
 	public void typeCompany(String cn) {
-		driver.findElement(enterCompany).sendKeys(cn);
+		log.info("Entering company.");
+		try {
+			driver.findElement(enterCompany).sendKeys(cn);
+		} catch (Exception e) {
+			log.error("Failed to enter company.", e);
+		}
 	}
 	
 	public void typeAddress1(String add1) {
-		driver.findElement(enterAdd1).sendKeys(add1);
+		log.info("Entering address line 1.");
+		try {
+			driver.findElement(enterAdd1).sendKeys(add1);
+		} catch (Exception e) {
+			log.error("Failed to enter address 1.", e);
+		}
 	}
 	
 	public void typeAddress2(String add2) {
-		driver.findElement(enterAdd2).sendKeys(add2);
+		log.info("Entering address line 2.");
+		try {
+			driver.findElement(enterAdd2).sendKeys(add2);
+		} catch (Exception e) {
+			log.error("Failed to enter address 2.", e);
+		}
 	}
 	
 	public void chooseCountry(String country) {
-		Select select = new Select(driver.findElement(selectCountry));
-		select.selectByVisibleText(country);
+		log.info("Selecting country: " + country);
+		try {
+			new Select(driver.findElement(selectCountry)).selectByVisibleText(country);
+		} catch (Exception e) {
+			log.error("Failed to select country.", e);
+		}
 	}
 	
 	public void typeState(String state) {
-		driver.findElement(enterState).sendKeys(state);
+		log.info("Entering state.");
+		try {
+			driver.findElement(enterState).sendKeys(state);
+		} catch (Exception e) {
+			log.error("Failed to enter state.", e);
+		}
 	}
 	
 	public void typeCity(String city) {
-		driver.findElement(enterCity).sendKeys(city);
+		log.info("Entering city.");
+		try {
+			driver.findElement(enterCity).sendKeys(city);
+		} catch (Exception e) {
+			log.error("Failed to enter city.", e);
+		}
 	}
 	
 	public void typeZip(String zip) {
-		driver.findElement(enterZipcode).sendKeys(zip);
+		log.info("Entering zip code.");
+		try {
+			driver.findElement(enterZipcode).sendKeys(zip);
+		} catch (Exception e) {
+			log.error("Failed to enter zip code.", e);
+		}
 	}
 	
 	public void typeMob(String mob) {
-		driver.findElement(enterMob).sendKeys(mob);
+		log.info("Entering mobile number.");
+		try {
+			driver.findElement(enterMob).sendKeys(mob);
+		} catch (Exception e) {
+			log.error("Failed to enter mobile number.", e);
+		}
 	}
 	
 	public void clickCreateAccount() {
-		driver.findElement(createAccBtn).click();
+		log.info("Clicking on 'Create Account' button.");
+		try {
+			driver.findElement(createAccBtn).click();
+		} catch (Exception e) {
+			log.error("Failed to click 'Create Account'.", e);
+		}
 	}
 }

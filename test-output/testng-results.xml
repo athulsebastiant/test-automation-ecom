@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-14T14:45:11 IST" name="Default suite" finished-at="2025-07-14T14:45:37 IST" duration-ms="25828">
+  <suite started-at="2025-07-14T19:02:46 IST" name="EcomTestSuite" finished-at="2025-07-14T19:03:49 IST" duration-ms="62973">
     <groups>
-      <group name="product">
-        <method signature="AllProductsTest.allProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@7fc645e4]" name="allProductsTest" class="org.ats.ecom_testing.tests.AllProductsTest"/>
-      </group> <!-- product -->
       <group name="smoke">
-        <method signature="AllProductsTest.allProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@7fc645e4]" name="allProductsTest" class="org.ats.ecom_testing.tests.AllProductsTest"/>
+        <method signature="LoginWithCorrectCreds.loginWithCorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@5ff2e84b]" name="loginWithCorrectCredentials" class="org.ats.ecom_testing.tests.LoginWithCorrectCreds"/>
+        <method signature="LoginWithIncorrectCreds.loginWithIncorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5445f5ba]" name="loginWithIncorrectCredentials" class="org.ats.ecom_testing.tests.LoginWithIncorrectCreds"/>
+        <method signature="LogoutSuccessTest.logoutSuccessfully()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@1431267b]" name="logoutSuccessfully" class="org.ats.ecom_testing.tests.LogoutSuccessTest"/>
+        <method signature="RegisterUserTest.registerNewUserTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@342726f1]" name="registerNewUserTest" class="org.ats.ecom_testing.tests.RegisterUserTest"/>
       </group> <!-- smoke -->
+      <group name="account">
+        <method signature="LoginWithCorrectCreds.loginWithCorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@5ff2e84b]" name="loginWithCorrectCredentials" class="org.ats.ecom_testing.tests.LoginWithCorrectCreds"/>
+        <method signature="LoginWithIncorrectCreds.loginWithIncorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5445f5ba]" name="loginWithIncorrectCredentials" class="org.ats.ecom_testing.tests.LoginWithIncorrectCreds"/>
+        <method signature="LogoutSuccessTest.logoutSuccessfully()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@1431267b]" name="logoutSuccessfully" class="org.ats.ecom_testing.tests.LogoutSuccessTest"/>
+        <method signature="RegisterUserTest.registerNewUserTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@342726f1]" name="registerNewUserTest" class="org.ats.ecom_testing.tests.RegisterUserTest"/>
+        <method signature="RegisterUserWithExistingEmail.registerUserWithExistingEmail()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserWithExistingEmail@c808207]" name="registerUserWithExistingEmail" class="org.ats.ecom_testing.tests.RegisterUserWithExistingEmail"/>
+      </group> <!-- account -->
     </groups>
-    <test started-at="2025-07-14T14:45:11 IST" name="Default test" finished-at="2025-07-14T14:45:37 IST" duration-ms="25828">
-      <class name="org.ats.ecom_testing.tests.AllProductsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@7fc645e4]" started-at="2025-07-14T14:45:11 IST" name="setUp" finished-at="2025-07-14T14:45:19 IST" duration-ms="7875" status="PASS">
+    <test started-at="2025-07-14T19:02:46 IST" name="AccountTests" finished-at="2025-07-14T19:03:49 IST" duration-ms="62973">
+      <class name="org.ats.ecom_testing.tests.LogoutSuccessTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@1431267b]" started-at="2025-07-14T19:02:46 IST" name="setUp" finished-at="2025-07-14T19:02:58 IST" duration-ms="12371" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,15 +31,99 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="allProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@7fc645e4]" started-at="2025-07-14T14:45:19 IST" name="allProductsTest" finished-at="2025-07-14T14:45:36 IST" duration-ms="17163" status="PASS">
+        <test-method signature="logoutSuccessfully()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@1431267b]" started-at="2025-07-14T19:02:58 IST" name="logoutSuccessfully" finished-at="2025-07-14T19:03:19 IST" duration-ms="20969" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- allProductsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@7fc645e4]" started-at="2025-07-14T14:45:36 IST" name="tearDown" finished-at="2025-07-14T14:45:37 IST" duration-ms="364" status="PASS">
+        </test-method> <!-- logoutSuccessfully -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@1431267b]" started-at="2025-07-14T19:03:20 IST" name="tearDown" finished-at="2025-07-14T19:03:21 IST" duration-ms="1022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.ats.ecom_testing.tests.AllProductsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- org.ats.ecom_testing.tests.LogoutSuccessTest -->
+      <class name="org.ats.ecom_testing.tests.LoginWithCorrectCreds">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@5ff2e84b]" started-at="2025-07-14T19:02:46 IST" name="setUp" finished-at="2025-07-14T19:02:53 IST" duration-ms="7410" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWithCorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@5ff2e84b]" started-at="2025-07-14T19:02:54 IST" name="loginWithCorrectCredentials" finished-at="2025-07-14T19:03:13 IST" duration-ms="19241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithCorrectCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@5ff2e84b]" started-at="2025-07-14T19:03:13 IST" name="tearDown" finished-at="2025-07-14T19:03:15 IST" duration-ms="2032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ats.ecom_testing.tests.LoginWithCorrectCreds -->
+      <class name="org.ats.ecom_testing.tests.RegisterUserTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@342726f1]" started-at="2025-07-14T19:02:46 IST" name="setUp" finished-at="2025-07-14T19:02:59 IST" duration-ms="12756" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerNewUserTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@342726f1]" started-at="2025-07-14T19:02:59 IST" name="registerNewUserTest" finished-at="2025-07-14T19:03:48 IST" duration-ms="49230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewUserTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@342726f1]" started-at="2025-07-14T19:03:48 IST" name="tearDown" finished-at="2025-07-14T19:03:49 IST" duration-ms="446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ats.ecom_testing.tests.RegisterUserTest -->
+      <class name="org.ats.ecom_testing.tests.LoginWithIncorrectCreds">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5445f5ba]" started-at="2025-07-14T19:02:46 IST" name="setUp" finished-at="2025-07-14T19:02:55 IST" duration-ms="8733" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWithIncorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5445f5ba]" started-at="2025-07-14T19:02:55 IST" name="loginWithIncorrectCredentials" finished-at="2025-07-14T19:03:37 IST" duration-ms="42333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithIncorrectCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5445f5ba]" started-at="2025-07-14T19:03:37 IST" name="tearDown" finished-at="2025-07-14T19:03:38 IST" duration-ms="392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ats.ecom_testing.tests.LoginWithIncorrectCreds -->
+      <class name="org.ats.ecom_testing.tests.RegisterUserWithExistingEmail">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserWithExistingEmail@c808207]" started-at="2025-07-14T19:02:46 IST" name="setUp" finished-at="2025-07-14T19:02:58 IST" duration-ms="11817" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerUserWithExistingEmail()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserWithExistingEmail@c808207]" started-at="2025-07-14T19:02:58 IST" name="registerUserWithExistingEmail" finished-at="2025-07-14T19:03:06 IST" duration-ms="8096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUserWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserWithExistingEmail@c808207]" started-at="2025-07-14T19:03:06 IST" name="tearDown" finished-at="2025-07-14T19:03:18 IST" duration-ms="11666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ats.ecom_testing.tests.RegisterUserWithExistingEmail -->
+    </test> <!-- AccountTests -->
+  </suite> <!-- EcomTestSuite -->
 </testng-results>

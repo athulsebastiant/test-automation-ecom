@@ -161,7 +161,7 @@ public class AllProductsPage {
 		
 		By dynamicAddToCartBtn = By
 				.xpath("(//div[@class='product-overlay']//a[contains(text(),'Add to cart')])[" + productIndex + "]");
-		waitToBeClickable(driver, dynamicAddToCartBtn, 10);
+		waitForVisibility(driver, dynamicAddToCartBtn, 15);
 		WebElement addToCartBtn = driver.findElement(dynamicAddToCartBtn);
 		actions.moveToElement(addToCartBtn).click().perform();
 WebElement productName = driver.findElement(By.xpath("(//div[@class='product-overlay'])["+productIndex+"]/div/p"));

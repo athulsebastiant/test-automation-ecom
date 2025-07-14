@@ -55,17 +55,114 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SmokeTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jul 13 19:59:02 IST 2025</td>
+<td>Started on:</td><td>Mon Jul 14 18:41:03 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (73 ms)</td>
+<tr><td>Total time:</td><td>110 seconds (110056 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td></td>
+<td>Included groups:</td><td>smoke </td>
 </tr><tr>
-<td>Excluded groups:</td><td>smoke </td>
+<td>Excluded groups:</td><td></td>
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.LogoutSuccessTest.logoutSuccessfully()'><b>logoutSuccessfully</b><br>Test class: org.ats.ecom_testing.tests.LogoutSuccessTest</td>
+<td><div><pre>java.lang.AssertionError: Logged in Username not visible expected [true] but found [false]
+	at org.ats.ecom_testing.tests.LogoutSuccessTest.logoutSuccessfully(LogoutSuccessTest.java:27)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace897227574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace897227574'><pre>java.lang.AssertionError: Logged in Username not visible expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.ats.ecom_testing.tests.LogoutSuccessTest.logoutSuccessfully(LogoutSuccessTest.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>14</td>
+<td>org.ats.ecom_testing.tests.LogoutSuccessTest@3f49e266</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.AllProductsTest.allProductsTest()'><b>allProductsTest</b><br>Test class: org.ats.ecom_testing.tests.AllProductsTest</td>
+<td></td>
+<td>15</td>
+<td>org.ats.ecom_testing.tests.AllProductsTest@2264e43c</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.AddProductsToCartTest.addProductsToCartTest()'><b>addProductsToCartTest</b><br>Test class: org.ats.ecom_testing.tests.AddProductsToCartTest</td>
+<td></td>
+<td>27</td>
+<td>org.ats.ecom_testing.tests.AddProductsToCartTest@3bec2275</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.LoginWithCorrectCreds.loginWithCorrectCredentials()'><b>loginWithCorrectCredentials</b><br>Test class: org.ats.ecom_testing.tests.LoginWithCorrectCreds</td>
+<td></td>
+<td>15</td>
+<td>org.ats.ecom_testing.tests.LoginWithCorrectCreds@5c9ac4cc</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.ProductQuantityInCartTest.productQuantityTest()'><b>productQuantityTest</b><br>Test class: org.ats.ecom_testing.tests.ProductQuantityInCartTest</td>
+<td></td>
+<td>30</td>
+<td>org.ats.ecom_testing.tests.ProductQuantityInCartTest@31da3d60</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.LoginWithIncorrectCreds.loginWithIncorrectCredentials()'><b>loginWithIncorrectCredentials</b><br>Test class: org.ats.ecom_testing.tests.LoginWithIncorrectCreds</td>
+<td></td>
+<td>8</td>
+<td>org.ats.ecom_testing.tests.LoginWithIncorrectCreds@4df39a88</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.SearchProductsTest.searchProductsTest()'><b>searchProductsTest</b><br>Test class: org.ats.ecom_testing.tests.SearchProductsTest</td>
+<td></td>
+<td>10</td>
+<td>org.ats.ecom_testing.tests.SearchProductsTest@5f18f9d2</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.RegisterAndCheckoutTest.registerThenPlaceOrderTest()'><b>registerThenPlaceOrderTest</b><br>Test class: org.ats.ecom_testing.tests.RegisterAndCheckoutTest</td>
+<td></td>
+<td>74</td>
+<td>org.ats.ecom_testing.tests.RegisterAndCheckoutTest@65ec8b24</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.LoginAndCheckout.loginAndCheckoutTest()'><b>loginAndCheckoutTest</b><br>Test class: org.ats.ecom_testing.tests.LoginAndCheckout</td>
+<td></td>
+<td>52</td>
+<td>org.ats.ecom_testing.tests.LoginAndCheckout@60acd609</td></tr>
+<tr>
+<td title='org.ats.ecom_testing.tests.RegisterUserTest.registerNewUserTest()'><b>registerNewUserTest</b><br>Test class: org.ats.ecom_testing.tests.RegisterUserTest</td>
+<td></td>
+<td>65</td>
+<td>org.ats.ecom_testing.tests.RegisterUserTest@58a63629</td></tr>
+</table><p>
 </body>
 </html>
