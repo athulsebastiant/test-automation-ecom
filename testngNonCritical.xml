@@ -2,6 +2,7 @@
 <suite name="EcomTestSuite" verbose="1" thread-count="6" parallel="methods">
 	<listeners>
         <listener class-name="org.ats.ecom_testing.utils.AllureListener"/>
+        <listener class-name="org.ats.ecom_testing.utils.RetryListener"></listener>
     </listeners>
 	 <parameter name="browser" value="chrome"/>
 	 <test name="non_critical">
