@@ -19,6 +19,7 @@ public class RegisterUserTest extends org.ats.ecom_testing.base.BaseTest {
 	@Description("Test to check whether the user can register with the website successfully.")
 	@Severity(SeverityLevel.CRITICAL)
 	public void registerNewUserTest() {
+		System.out.println("Working dir: " + System.getProperty("user.dir"));
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		home.clickSignupLoginBtn();
