@@ -1,5 +1,7 @@
 # 🛒 E-commerce Test Automation Framework
 
+> 📊 [Live Allure Report](https://athulsebastiant.github.io/test-automation-ecom/)
+
 ## 📌 Overview
 
 This project presents a robust and scalable test automation framework for an e-commerce website (e.g., [Automation Exercise](https://automationexercise.com)). Developed using **Java**, **Selenium WebDriver**, and **TestNG**, it automates critical user flows and functionalities to ensure the quality and stability of the application.
