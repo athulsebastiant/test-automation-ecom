@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"6e1b9b7e41a0e5c021a10d3245883171","name":"EcomTestSuite","statistic":{"failed":0,"broken":0,"skipped":0,"passed":21,"unknown":0,"total":21}},{"uid":"2c8837b97293ea01a164a5cd7048ad56","name":"Default suite","statistic":{"failed":0,"broken":0,"skipped":0,"passed":8,"unknown":0,"total":8}}]}
