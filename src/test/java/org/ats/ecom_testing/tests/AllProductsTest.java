@@ -5,6 +5,7 @@ import org.ats.ecom_testing.pages.HomePage;
 import org.ats.ecom_testing.pages.ProductDetailsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -17,13 +18,14 @@ public class AllProductsTest extends org.ats.ecom_testing.base.BaseTest {
 	@Description("Test to check whether the all products page has all products visible. Also whether the product details are visible.")
 	@Severity(SeverityLevel.CRITICAL)
 	public void allProductsTest() {
+		SoftAssert softAssert = new SoftAssert();
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
-		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
+		softAssert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
 		Assert.assertTrue(allProducts.isAllProductsListVisible(),"All Products list is not visible");
 		allProducts.clickFirstProductView();
 		
@@ -34,7 +36,7 @@ public class AllProductsTest extends org.ats.ecom_testing.base.BaseTest {
 		Assert.assertTrue(productDetailsPage.isAvailabiltyVisible(),"Product availabilty is not visible");
 		Assert.assertTrue(productDetailsPage.isConditionVisible(),"Product condition is not visible");
 		Assert.assertTrue(productDetailsPage.isBrandVisible(),"Product brand is not visible");
-		
+		softAssert.assertAll();
 	}
 	
 	}

@@ -10,6 +10,7 @@ import org.ats.ecom_testing.pages.CartPage;
 import org.ats.ecom_testing.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -23,13 +24,14 @@ public class RemoveProductsTest extends org.ats.ecom_testing.base.BaseTest {
 	@Description("Test to check whether the user can remove products from the cart page successfully.")
 	@Severity(SeverityLevel.CRITICAL)
 	public void removeProductFromCartTest() {
+		SoftAssert softAssert = new SoftAssert();
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
-		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is not visible");
+		softAssert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is not visible");
 		products.add(allProducts.clickAddToCart(1));
 		allProducts.clickContinueShopping();
 		products.add(allProducts.clickAddToCart(2));
@@ -50,5 +52,6 @@ public class RemoveProductsTest extends org.ats.ecom_testing.base.BaseTest {
 		        updatedCartProducts.contains(productToRemove),
 		        "Removed product is still present in the cart: " + productToRemove
 		    );
+		softAssert.assertAll();
 	}
 }

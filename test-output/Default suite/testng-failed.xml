@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.ats.ecom_testing.tests.RegisterAndCheckoutTest">
+      <class name="org.ats.ecom_testing.tests.AddProductsToCartTest">
         <methods>
-          <include name="registerThenPlaceOrderTest"/>
+          <include name="addProductsToCartTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- org.ats.ecom_testing.tests.RegisterAndCheckoutTest -->
+      </class> <!-- org.ats.ecom_testing.tests.AddProductsToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

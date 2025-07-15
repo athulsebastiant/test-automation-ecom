@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="4" parallel="methods" name="Failed suite [EcomTestSuite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="chrome"/>
-  <listeners>
-    <listener class-name="org.ats.ecom_testing.utils.AllureListener"/>
-  </listeners>
-  <test thread-count="4" parallel="methods" name="cartTests(failed)">
-    <groups>
-      <run>
-        <include name="cart"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.ats.ecom_testing.tests.VerifyCartAfterLoginTest">
+      <class name="org.ats.ecom_testing.tests.AddProductsToCartTest">
         <methods>
+          <include name="addProductsToCartTest"/>
           <include name="setUp"/>
-          <include name="verifyCartAfterLogin"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- org.ats.ecom_testing.tests.VerifyCartAfterLoginTest -->
+      </class> <!-- org.ats.ecom_testing.tests.AddProductsToCartTest -->
     </classes>
-  </test> <!-- cartTests(failed) -->
-</suite> <!-- Failed suite [EcomTestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

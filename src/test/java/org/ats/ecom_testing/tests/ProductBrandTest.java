@@ -5,6 +5,7 @@ import org.ats.ecom_testing.pages.BrandProductsPage;
 import org.ats.ecom_testing.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -16,13 +17,14 @@ public class ProductBrandTest extends org.ats.ecom_testing.base.BaseTest {
 	@Description("Test to check whether the user can filter products by brand successfully.")
 	@Severity(SeverityLevel.NORMAL)
 	public void productBrandTest() {
+		SoftAssert softAssert = new SoftAssert();
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
-		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
+		softAssert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
 		Assert.assertTrue(allProducts.isBrandsHeaderDisplayed(),"Brands Header not displayed");
 		Assert.assertTrue(allProducts.isBrandsLinksDisplayed(),"Brand links not displayed");
 		allProducts.clickBrandPolo();
@@ -32,6 +34,7 @@ public class ProductBrandTest extends org.ats.ecom_testing.base.BaseTest {
 		Assert.assertEquals(brandProductsPage.getBrandHeaderPolo(), "BRAND - POLO PRODUCTS");
 		brandProductsPage.clickHMBrandLink();
 		Assert.assertEquals(brandProductsPage.getBrandHeaderHM(), "BRAND - H&M PRODUCTS");
+		softAssert.assertAll();
 	}
 
 }

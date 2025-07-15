@@ -5,6 +5,7 @@ import org.ats.ecom_testing.pages.HomePage;
 import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -16,12 +17,13 @@ public class ContactFormTest extends org.ats.ecom_testing.base.BaseTest {
 	@Description("Test to check whether the contact us form works correctly.")
 	@Severity(SeverityLevel.MINOR)
 	public void contactFormTest() {
+		SoftAssert softAssert = new SoftAssert();
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		
 		home.clickContactUsBtn();
 		ContactUsPage contactUs = new ContactUsPage();
-		Assert.assertTrue(contactUs.isGetInTouchHeaderVisible(), "get In touch message not visible");
+		softAssert.assertTrue(contactUs.isGetInTouchHeaderVisible(), "get In touch message not visible");
 		contactUs.enterName("testMan");
 		contactUs.enterEmail("test@mail.com");
 		contactUs.enterSubject("Test Subject");
@@ -33,6 +35,6 @@ public class ContactFormTest extends org.ats.ecom_testing.base.BaseTest {
 		contactUs.isSuccessMsgVisible();
 		contactUs.clickHomeBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/");
-		
+		softAssert.assertAll();
 	}
 }

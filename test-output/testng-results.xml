@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T12:15:35 IST" name="EcomTestSuite" finished-at="2025-07-15T12:16:50 IST" duration-ms="74708">
+  <suite started-at="2025-07-15T13:21:03 IST" name="EcomTestSuite" finished-at="2025-07-15T13:23:06 IST" duration-ms="122992">
     <groups>
       <group name="product">
         <method signature="AllProductsTest.allProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" name="allProductsTest" class="org.ats.ecom_testing.tests.AllProductsTest"/>
@@ -35,9 +35,9 @@
         <method signature="ProductQuantityInCartTest.productQuantityTest()[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" name="productQuantityTest" class="org.ats.ecom_testing.tests.ProductQuantityInCartTest"/>
       </group> <!-- cart -->
     </groups>
-    <test started-at="2025-07-15T12:15:35 IST" name="SmokeTests" finished-at="2025-07-15T12:16:50 IST" duration-ms="74708">
+    <test started-at="2025-07-15T13:21:03 IST" name="SmokeTests" finished-at="2025-07-15T13:23:06 IST" duration-ms="122992">
       <class name="org.ats.ecom_testing.tests.AddProductsToCartTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.AddProductsToCartTest@2264e43c]" started-at="2025-07-15T12:15:36 IST" name="setUp" finished-at="2025-07-15T12:15:44 IST" duration-ms="8813" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.AddProductsToCartTest@2264e43c]" started-at="2025-07-15T13:21:03 IST" name="setUp" finished-at="2025-07-15T13:21:18 IST" duration-ms="14939" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,17 +48,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addProductsToCartTest()[pri:0, instance:org.ats.ecom_testing.tests.AddProductsToCartTest@2264e43c]" started-at="2025-07-15T12:15:44 IST" name="addProductsToCartTest" finished-at="2025-07-15T12:16:09 IST" duration-ms="24679" status="PASS">
+        <test-method signature="addProductsToCartTest()[pri:0, instance:org.ats.ecom_testing.tests.AddProductsToCartTest@2264e43c]" started-at="2025-07-15T13:21:18 IST" name="addProductsToCartTest" finished-at="2025-07-15T13:22:08 IST" duration-ms="49240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductsToCartTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.AddProductsToCartTest@2264e43c]" started-at="2025-07-15T12:16:10 IST" name="tearDown" finished-at="2025-07-15T12:16:23 IST" duration-ms="13723" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.AddProductsToCartTest@2264e43c]" started-at="2025-07-15T13:22:08 IST" name="tearDown" finished-at="2025-07-15T13:22:13 IST" duration-ms="4919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.AddProductsToCartTest -->
       <class name="org.ats.ecom_testing.tests.LogoutSuccessTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@65ec8b24]" started-at="2025-07-15T12:16:23 IST" name="setUp" finished-at="2025-07-15T12:16:27 IST" duration-ms="3408" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@65ec8b24]" started-at="2025-07-15T13:22:13 IST" name="setUp" finished-at="2025-07-15T13:22:20 IST" duration-ms="7245" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,17 +69,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="logoutSuccessfully()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@65ec8b24]" started-at="2025-07-15T12:16:27 IST" name="logoutSuccessfully" finished-at="2025-07-15T12:16:37 IST" duration-ms="10091" status="PASS">
+        <test-method signature="logoutSuccessfully()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@65ec8b24]" started-at="2025-07-15T13:22:20 IST" name="logoutSuccessfully" finished-at="2025-07-15T13:22:38 IST" duration-ms="17425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutSuccessfully -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@65ec8b24]" started-at="2025-07-15T12:16:37 IST" name="tearDown" finished-at="2025-07-15T12:16:38 IST" duration-ms="412" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LogoutSuccessTest@65ec8b24]" started-at="2025-07-15T13:22:39 IST" name="tearDown" finished-at="2025-07-15T13:22:41 IST" duration-ms="2652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.LogoutSuccessTest -->
       <class name="org.ats.ecom_testing.tests.LoginWithCorrectCreds">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@468be356]" started-at="2025-07-15T12:15:36 IST" name="setUp" finished-at="2025-07-15T12:15:44 IST" duration-ms="8924" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@468be356]" started-at="2025-07-15T13:21:03 IST" name="setUp" finished-at="2025-07-15T13:21:21 IST" duration-ms="17906" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,17 +90,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithCorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@468be356]" started-at="2025-07-15T12:15:44 IST" name="loginWithCorrectCredentials" finished-at="2025-07-15T12:15:58 IST" duration-ms="13902" status="PASS">
+        <test-method signature="loginWithCorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@468be356]" started-at="2025-07-15T13:21:21 IST" name="loginWithCorrectCredentials" finished-at="2025-07-15T13:22:08 IST" duration-ms="46474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithCorrectCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@468be356]" started-at="2025-07-15T12:15:59 IST" name="tearDown" finished-at="2025-07-15T12:16:01 IST" duration-ms="1848" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithCorrectCreds@468be356]" started-at="2025-07-15T13:22:09 IST" name="tearDown" finished-at="2025-07-15T13:22:13 IST" duration-ms="4213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.LoginWithCorrectCreds -->
       <class name="org.ats.ecom_testing.tests.LoginAndCheckout">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginAndCheckout@31da3d60]" started-at="2025-07-15T12:16:02 IST" name="setUp" finished-at="2025-07-15T12:16:10 IST" duration-ms="8320" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginAndCheckout@31da3d60]" started-at="2025-07-15T13:21:53 IST" name="setUp" finished-at="2025-07-15T13:21:58 IST" duration-ms="4625" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -111,17 +111,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginAndCheckoutTest()[pri:0, instance:org.ats.ecom_testing.tests.LoginAndCheckout@31da3d60]" started-at="2025-07-15T12:16:10 IST" name="loginAndCheckoutTest" finished-at="2025-07-15T12:16:41 IST" duration-ms="30435" status="PASS">
+        <test-method signature="loginAndCheckoutTest()[pri:0, instance:org.ats.ecom_testing.tests.LoginAndCheckout@31da3d60]" started-at="2025-07-15T13:21:58 IST" name="loginAndCheckoutTest" finished-at="2025-07-15T13:22:53 IST" duration-ms="54994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndCheckoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginAndCheckout@31da3d60]" started-at="2025-07-15T12:16:41 IST" name="tearDown" finished-at="2025-07-15T12:16:42 IST" duration-ms="440" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginAndCheckout@31da3d60]" started-at="2025-07-15T13:22:53 IST" name="tearDown" finished-at="2025-07-15T13:22:54 IST" duration-ms="630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.LoginAndCheckout -->
       <class name="org.ats.ecom_testing.tests.RegisterAndCheckoutTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.RegisterAndCheckoutTest@60acd609]" started-at="2025-07-15T12:16:02 IST" name="setUp" finished-at="2025-07-15T12:16:09 IST" duration-ms="6863" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.RegisterAndCheckoutTest@60acd609]" started-at="2025-07-15T13:22:13 IST" name="setUp" finished-at="2025-07-15T13:22:16 IST" duration-ms="3395" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,17 +132,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerThenPlaceOrderTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterAndCheckoutTest@60acd609]" started-at="2025-07-15T12:16:09 IST" name="registerThenPlaceOrderTest" finished-at="2025-07-15T12:16:50 IST" duration-ms="40461" status="PASS">
+        <test-method signature="registerThenPlaceOrderTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterAndCheckoutTest@60acd609]" started-at="2025-07-15T13:22:16 IST" name="registerThenPlaceOrderTest" finished-at="2025-07-15T13:23:05 IST" duration-ms="49084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerThenPlaceOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.RegisterAndCheckoutTest@60acd609]" started-at="2025-07-15T12:16:50 IST" name="tearDown" finished-at="2025-07-15T12:16:50 IST" duration-ms="368" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.RegisterAndCheckoutTest@60acd609]" started-at="2025-07-15T13:23:06 IST" name="tearDown" finished-at="2025-07-15T13:23:06 IST" duration-ms="520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.RegisterAndCheckoutTest -->
       <class name="org.ats.ecom_testing.tests.SearchProductsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.SearchProductsTest@3f49e266]" started-at="2025-07-15T12:16:23 IST" name="setUp" finished-at="2025-07-15T12:16:29 IST" duration-ms="5775" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.SearchProductsTest@3f49e266]" started-at="2025-07-15T13:22:17 IST" name="setUp" finished-at="2025-07-15T13:22:22 IST" duration-ms="5451" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -153,17 +153,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.SearchProductsTest@3f49e266]" started-at="2025-07-15T12:16:29 IST" name="searchProductsTest" finished-at="2025-07-15T12:16:37 IST" duration-ms="7336" status="PASS">
+        <test-method signature="searchProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.SearchProductsTest@3f49e266]" started-at="2025-07-15T13:22:22 IST" name="searchProductsTest" finished-at="2025-07-15T13:22:40 IST" duration-ms="17507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.SearchProductsTest@3f49e266]" started-at="2025-07-15T12:16:37 IST" name="tearDown" finished-at="2025-07-15T12:16:37 IST" duration-ms="510" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.SearchProductsTest@3f49e266]" started-at="2025-07-15T13:22:40 IST" name="tearDown" finished-at="2025-07-15T13:22:44 IST" duration-ms="3248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.SearchProductsTest -->
       <class name="org.ats.ecom_testing.tests.AllProductsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" started-at="2025-07-15T12:15:36 IST" name="setUp" finished-at="2025-07-15T12:15:49 IST" duration-ms="13631" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" started-at="2025-07-15T13:21:03 IST" name="setUp" finished-at="2025-07-15T13:21:19 IST" duration-ms="15234" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -174,17 +174,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="allProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" started-at="2025-07-15T12:15:49 IST" name="allProductsTest" finished-at="2025-07-15T12:16:00 IST" duration-ms="11095" status="PASS">
+        <test-method signature="allProductsTest()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" started-at="2025-07-15T13:21:19 IST" name="allProductsTest" finished-at="2025-07-15T13:21:48 IST" duration-ms="29470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allProductsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" started-at="2025-07-15T12:16:01 IST" name="tearDown" finished-at="2025-07-15T12:16:02 IST" duration-ms="1446" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.AllProductsTest@4df39a88]" started-at="2025-07-15T13:21:48 IST" name="tearDown" finished-at="2025-07-15T13:21:51 IST" duration-ms="2490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.AllProductsTest -->
       <class name="org.ats.ecom_testing.tests.RegisterUserTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@7c75db8b]" started-at="2025-07-15T12:15:36 IST" name="setUp" finished-at="2025-07-15T12:15:49 IST" duration-ms="13760" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@7c75db8b]" started-at="2025-07-15T13:21:03 IST" name="setUp" finished-at="2025-07-15T13:21:21 IST" duration-ms="17853" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -195,17 +195,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerNewUserTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@7c75db8b]" started-at="2025-07-15T12:15:49 IST" name="registerNewUserTest" finished-at="2025-07-15T12:16:27 IST" duration-ms="37641" status="PASS">
+        <test-method signature="registerNewUserTest()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@7c75db8b]" started-at="2025-07-15T13:21:21 IST" name="registerNewUserTest" finished-at="2025-07-15T13:22:20 IST" duration-ms="58831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerNewUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@7c75db8b]" started-at="2025-07-15T12:16:28 IST" name="tearDown" finished-at="2025-07-15T12:16:30 IST" duration-ms="2372" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.RegisterUserTest@7c75db8b]" started-at="2025-07-15T13:22:21 IST" name="tearDown" finished-at="2025-07-15T13:22:41 IST" duration-ms="20276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.RegisterUserTest -->
       <class name="org.ats.ecom_testing.tests.LoginWithIncorrectCreds">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5c9ac4cc]" started-at="2025-07-15T12:15:36 IST" name="setUp" finished-at="2025-07-15T12:15:49 IST" duration-ms="13472" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5c9ac4cc]" started-at="2025-07-15T13:21:03 IST" name="setUp" finished-at="2025-07-15T13:21:19 IST" duration-ms="15343" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -216,17 +216,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithIncorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5c9ac4cc]" started-at="2025-07-15T12:15:49 IST" name="loginWithIncorrectCredentials" finished-at="2025-07-15T12:15:58 IST" duration-ms="9217" status="PASS">
+        <test-method signature="loginWithIncorrectCredentials()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5c9ac4cc]" started-at="2025-07-15T13:21:19 IST" name="loginWithIncorrectCredentials" finished-at="2025-07-15T13:21:47 IST" duration-ms="28721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithIncorrectCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5c9ac4cc]" started-at="2025-07-15T12:15:59 IST" name="tearDown" finished-at="2025-07-15T12:16:02 IST" duration-ms="2785" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.LoginWithIncorrectCreds@5c9ac4cc]" started-at="2025-07-15T13:21:48 IST" name="tearDown" finished-at="2025-07-15T13:21:53 IST" duration-ms="4668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ats.ecom_testing.tests.LoginWithIncorrectCreds -->
       <class name="org.ats.ecom_testing.tests.ProductQuantityInCartTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" started-at="2025-07-15T12:16:01 IST" name="setUp" finished-at="2025-07-15T12:16:11 IST" duration-ms="9582" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" started-at="2025-07-15T13:21:51 IST" name="setUp" finished-at="2025-07-15T13:21:54 IST" duration-ms="3588" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -237,11 +237,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="productQuantityTest()[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" started-at="2025-07-15T12:16:11 IST" name="productQuantityTest" finished-at="2025-07-15T12:16:22 IST" duration-ms="10978" status="PASS">
+        <test-method signature="productQuantityTest()[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" started-at="2025-07-15T13:21:54 IST" name="productQuantityTest" finished-at="2025-07-15T13:22:12 IST" duration-ms="17686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productQuantityTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" started-at="2025-07-15T12:16:22 IST" name="tearDown" finished-at="2025-07-15T12:16:23 IST" duration-ms="1165" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.ats.ecom_testing.tests.ProductQuantityInCartTest@3bec2275]" started-at="2025-07-15T13:22:13 IST" name="tearDown" finished-at="2025-07-15T13:22:17 IST" duration-ms="4355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -5,6 +5,7 @@ import org.ats.ecom_testing.pages.HomePage;
 import org.ats.ecom_testing.pages.ProductDetailsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -16,6 +17,7 @@ public class AddReviewTest extends org.ats.ecom_testing.base.BaseTest{
 	@Description("Test to chech whether reviews can be added for the products correctly")
 	@Severity(SeverityLevel.MINOR)
 	public void addReviewTest() {
+		SoftAssert softAssert = new SoftAssert();
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 
@@ -26,8 +28,8 @@ public class AddReviewTest extends org.ats.ecom_testing.base.BaseTest{
 		allProducts.clickFirstProductView();
 		
 		ProductDetailsPage productDetailsPage = new ProductDetailsPage();
-		Assert.assertTrue(productDetailsPage.isProductNameVisible(),"Product Name is not visible");
-		Assert.assertTrue(productDetailsPage.isWriteYourReviewDisplayed(),"Write Your Review Header not found");
+		softAssert.assertTrue(productDetailsPage.isProductNameVisible(),"Product Name is not visible");
+		softAssert.assertTrue(productDetailsPage.isWriteYourReviewDisplayed(),"Write Your Review Header not found");
 		productDetailsPage.enterName("testNAme");
 		productDetailsPage.enterEmail("test1232@mail.com");
 		productDetailsPage.enterReview("Sample review");

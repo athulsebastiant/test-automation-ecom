@@ -4,6 +4,7 @@ import org.ats.ecom_testing.pages.AllProductsPage;
 import org.ats.ecom_testing.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -17,16 +18,18 @@ public class SearchProductsTest extends org.ats.ecom_testing.base.BaseTest {
 	@Description("Test to check whether the user can search for products successfully.")
 	@Severity(SeverityLevel.CRITICAL)
 	public void searchProductsTest() {
+		SoftAssert softAssert = new SoftAssert();
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
-		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is not visible");
+		softAssert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is not visible");
 		allProducts.search(keyword);
 		Assert.assertTrue(allProducts.isSearchedProductsHeadervisible(), "Searched Products header is not visible");
 		Assert.assertTrue(allProducts.areAllSearchedProductsRelevant(keyword),"All products are not relevant");
+		softAssert.assertAll();
 	}
 
 }
