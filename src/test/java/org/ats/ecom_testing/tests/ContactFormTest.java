@@ -18,8 +18,8 @@ public class ContactFormTest extends org.ats.ecom_testing.base.BaseTest {
 	public void contactFormTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
-		home.clickContactUsBtn();
 		
+		home.clickContactUsBtn();
 		ContactUsPage contactUs = new ContactUsPage();
 		Assert.assertTrue(contactUs.isGetInTouchHeaderVisible(), "get In touch message not visible");
 		contactUs.enterName("testMan");

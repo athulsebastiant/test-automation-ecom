@@ -1,8 +1,8 @@
 package org.ats.ecom_testing.tests;
 
-import java.util.ArrayList;
+
 import java.util.HashSet;
-import java.util.List;
+
 import java.util.Set;
 
 import org.ats.ecom_testing.pages.AllProductsPage;
@@ -17,7 +17,7 @@ import io.qameta.allure.SeverityLevel;
 
 
 public class AddProductsToCartTest extends org.ats.ecom_testing.base.BaseTest{
-	Set <String> products = new HashSet();
+	Set <String> products = new HashSet<String>();
 			
 	Set<String> cartProducts;
 	@Test (groups = {"smoke","cart"})
@@ -26,6 +26,7 @@ public class AddProductsToCartTest extends org.ats.ecom_testing.base.BaseTest{
 	public void addProductsToCartTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
@@ -34,10 +35,11 @@ public class AddProductsToCartTest extends org.ats.ecom_testing.base.BaseTest{
 		allProducts.clickContinueShopping();
 		products.add(allProducts.clickAddToCart(2));
 		allProducts.clickViewCart();
+		
 		CartPage cartPage = new CartPage();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
 		cartProducts= cartPage.getAllProductsinCart();
-		//Assert.assertEquals(cartProducts, products,"Cart product list does not match added products");
+	
 		for (String expected : products) {
 		    Assert.assertTrue(cartProducts.contains(expected),
 		        "Cart does not contain expected product: " + expected);

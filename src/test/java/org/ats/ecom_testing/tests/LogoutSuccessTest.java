@@ -1,7 +1,8 @@
 package org.ats.ecom_testing.tests;
 
 import org.ats.ecom_testing.pages.HomePage;
-import org.ats.ecom_testing.pages.SignupLoginPage;
+
+import org.ats.ecom_testing.utils.LoginUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,12 +19,9 @@ public class LogoutSuccessTest extends org.ats.ecom_testing.base.BaseTest {
 	public void logoutSuccessfully() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(), "Home page is not visible");
+		
 		home.clickSignupLoginBtn();
-		SignupLoginPage signupPage = new SignupLoginPage();
-		Assert.assertTrue(signupPage.isLoginHeaderVisible(), "Login header isn't visible");
-		signupPage.enterLoginEmail("asas1@mail.com");
-		signupPage.enterLoginPassword("1234567");
-		signupPage.clickLoginBtn();
+		LoginUtil.login(driver);
 		Assert.assertTrue(home.isLoggedInUserNameVisible(), "Logged in Username not visible");
 		home.clickLogoutBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");

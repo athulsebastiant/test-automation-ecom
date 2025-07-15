@@ -18,6 +18,7 @@ public class LoginWithIncorrectCreds extends org.ats.ecom_testing.base.BaseTest 
 	public void loginWithIncorrectCredentials() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickSignupLoginBtn();
 		SignupLoginPage signupPage = new SignupLoginPage();
 		Assert.assertTrue(signupPage.isLoginHeaderVisible(), "Login header isn't visible");

@@ -21,10 +21,12 @@ public class AddRecommendedProducts extends org.ats.ecom_testing.base.BaseTest {
 	public void addRecommendedProducts() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.scrollToRecommendedSection();
 		Assert.assertTrue(home.isRecommendedItemsDisplayed(), "Recommended items header not found ");
 		home.clickAddToCartForRecommendedProduct(productName);
 		home.clickViewCart();
+		
 		CartPage cartPage = new CartPage();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
 		cartProducts= cartPage.getAllProductsinCart();

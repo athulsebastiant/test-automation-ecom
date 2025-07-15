@@ -2,6 +2,7 @@ package org.ats.ecom_testing.tests;
 
 import org.ats.ecom_testing.pages.HomePage;
 import org.ats.ecom_testing.pages.SignupLoginPage;
+import org.ats.ecom_testing.utils.LoginUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,12 +18,12 @@ public class RegisterUserWithExistingEmail extends org.ats.ecom_testing.base.Bas
 	public void registerUserWithExistingEmail() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
-		home.clickSignupLoginBtn();
 		
+		home.clickSignupLoginBtn();
 		SignupLoginPage signupPage = new SignupLoginPage();
 		Assert.assertTrue(signupPage.isNewUserSignupVisible(),"New User Signup Header is not visible");
-		signupPage.enterName("qwqw");
-		signupPage.enterSignupEmail("asas1@mail.com");
+		signupPage.enterName(LoginUtil.name);
+		signupPage.enterSignupEmail(LoginUtil.email);
 		signupPage.clickSignupBtn();
 		Assert.assertTrue(signupPage.isExistingEmailWarningIsVisible(), "Email address exists warning not shown");
 		

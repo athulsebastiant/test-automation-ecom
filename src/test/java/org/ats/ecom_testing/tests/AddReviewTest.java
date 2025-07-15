@@ -18,11 +18,13 @@ public class AddReviewTest extends org.ats.ecom_testing.base.BaseTest{
 	public void addReviewTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
 		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
 		allProducts.clickFirstProductView();
+		
 		ProductDetailsPage productDetailsPage = new ProductDetailsPage();
 		Assert.assertTrue(productDetailsPage.isProductNameVisible(),"Product Name is not visible");
 		Assert.assertTrue(productDetailsPage.isWriteYourReviewDisplayed(),"Write Your Review Header not found");

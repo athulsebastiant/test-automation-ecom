@@ -6,7 +6,8 @@ import java.util.Set;
 import org.ats.ecom_testing.pages.AllProductsPage;
 import org.ats.ecom_testing.pages.CartPage;
 import org.ats.ecom_testing.pages.HomePage;
-import org.ats.ecom_testing.pages.SignupLoginPage;
+
+import org.ats.ecom_testing.utils.LoginUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -28,6 +29,7 @@ public class VerifyCartAfterLoginTest extends org.ats.ecom_testing.base.BaseTest
 	public void verifyCartAfterLogin() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
@@ -35,13 +37,13 @@ public class VerifyCartAfterLoginTest extends org.ats.ecom_testing.base.BaseTest
 		Assert.assertTrue(allProducts.isSearchedProductsHeadervisible(),"Searched products header is not visible");
 		Assert.assertTrue(allProducts.areAllSearchedProductsRelevant(keyword));
 		int noOfProdsDisplayed = allProducts.getNumberOfDisplayedProducts();
-		
 		for (i=1;i<noOfProdsDisplayed;i++) {
 			productsAdded.add(allProducts.clickAddToCart(i));
 			allProducts.clickContinueShopping();
 		}
 		productsAdded.add(allProducts.clickAddToCart(i));
 		allProducts.clickViewCart();
+		
 		CartPage cartPage = new CartPage();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
 		cartProducts= cartPage.getAllProductsinCart();
@@ -50,12 +52,10 @@ public class VerifyCartAfterLoginTest extends org.ats.ecom_testing.base.BaseTest
 		        "Cart does not contain expected product: " + expected);
 		}
 		cartPage.clickSignupLogin();
-		SignupLoginPage signupPage = new SignupLoginPage();
-		Assert.assertTrue(signupPage.isLoginHeaderVisible(), "Login header isn't visible");
-		signupPage.enterLoginEmail("asas1@mail.com");
-		signupPage.enterLoginPassword("1234567");
-		signupPage.clickLoginBtn();
+		
+		LoginUtil.login(driver);
 		Assert.assertTrue(home.isLoggedInUserNameVisible(), "Logged in Username not visible");
+		
 		home.clickCartBtn();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
 		for (String expected : productsAdded) {

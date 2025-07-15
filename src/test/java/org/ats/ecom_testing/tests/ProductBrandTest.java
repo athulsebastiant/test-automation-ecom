@@ -18,14 +18,15 @@ public class ProductBrandTest extends org.ats.ecom_testing.base.BaseTest {
 	public void productBrandTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
 		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
 		Assert.assertTrue(allProducts.isBrandsHeaderDisplayed(),"Brands Header not displayed");
 		Assert.assertTrue(allProducts.isBrandsLinksDisplayed(),"Brand links not displayed");
-		
 		allProducts.clickBrandPolo();
+		
 		BrandProductsPage brandProductsPage = new BrandProductsPage();
 		Assert.assertTrue(brandProductsPage.isBrandHeaderPoloDisplayed());
 		Assert.assertEquals(brandProductsPage.getBrandHeaderPolo(), "BRAND - POLO PRODUCTS");

@@ -1,8 +1,8 @@
 package org.ats.ecom_testing.tests;
 
-import java.util.ArrayList;
+
 import java.util.HashSet;
-import java.util.List;
+
 import java.util.Set;
 
 import org.ats.ecom_testing.pages.AllProductsPage;
@@ -25,6 +25,7 @@ public class RemoveProductsTest extends org.ats.ecom_testing.base.BaseTest {
 	public void removeProductFromCartTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
@@ -33,6 +34,7 @@ public class RemoveProductsTest extends org.ats.ecom_testing.base.BaseTest {
 		allProducts.clickContinueShopping();
 		products.add(allProducts.clickAddToCart(2));
 		allProducts.clickViewCart();
+		
 		CartPage cartPage = new CartPage();
 		Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/view_cart");
 		cartProducts= cartPage.getAllProductsinCart();

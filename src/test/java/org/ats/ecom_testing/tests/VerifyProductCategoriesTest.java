@@ -19,11 +19,12 @@ public class VerifyProductCategoriesTest extends org.ats.ecom_testing.base.BaseT
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		home.isCategoryHeaderDisplayed();
+		
 		home.clickWomenCategory();
 		home.clickWomenDressSubCategory();
 		CategoryProductsPage categoryProductsPage = new CategoryProductsPage();
-		
 		Assert.assertEquals(categoryProductsPage.getCategoryHeaderWomenDress(), "WOMEN - DRESS PRODUCTS");
+		
 		categoryProductsPage.clickCategoryMen();
 		categoryProductsPage.clickSUbcategoryMenTshirts();
 		System.out.println(categoryProductsPage.getCategoryHeaderMenTshirts());

@@ -19,12 +19,14 @@ public class AllProductsTest extends org.ats.ecom_testing.base.BaseTest {
 	public void allProductsTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickProductsBtn();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products");
 		AllProductsPage allProducts = new AllProductsPage();
 		Assert.assertTrue(allProducts.isAllProductsHeaderVisible(),"All Products Header is visible");
 		Assert.assertTrue(allProducts.isAllProductsListVisible(),"All Products list is not visible");
 		allProducts.clickFirstProductView();
+		
 		ProductDetailsPage productDetailsPage = new ProductDetailsPage();
 		Assert.assertTrue(productDetailsPage.isProductNameVisible(),"Product Name is not visible");
 		Assert.assertTrue(productDetailsPage.isProductCategoryVisible(),"Product category is not visible");

@@ -21,12 +21,14 @@ public class ProductQuantityInCartTest extends org.ats.ecom_testing.base.BaseTes
 	public void productQuantityTest() {
 		HomePage home = new HomePage();
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
+		
 		home.clickProductView(productNo);
 		ProductDetailsPage productDetails = new ProductDetailsPage();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/product_details/"+productNo,"User was not lead to product details page");
 		productDetails.ChangeQuantity(qty);
 		productDetails.clickAddToCart();
 		productDetails.clickViewCart();
+		
 		CartPage cartPage = new CartPage();
 		Assert.assertEquals(cartPage.getQuantity(1), qty,"Quantities do not match");
 		

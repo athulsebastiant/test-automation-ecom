@@ -20,7 +20,7 @@ public class SubscriptionTestInCart extends org.ats.ecom_testing.base.BaseTest {
 		Assert.assertTrue(home.isHomePageVisible(),"Home page is not visible");
 		
 		CartPage cart = new CartPage();
-		cart.subscribe("asa1@mail.com");
+		cart.subscribe("regularmail@mail.com");
 		Assert.assertTrue(cart.subConfirmation(),"Subscription confirmation not visible");
 	}
 	
